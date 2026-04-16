@@ -6,9 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to fetch activities from API
   async function fetchActivities() {
+    console.log("Fetching activities...");
     try {
       const response = await fetch("/activities");
       const activities = await response.json();
+      console.log("Activities received:", activities);
 
       // Clear loading message
       activitiesList.innerHTML = "";
